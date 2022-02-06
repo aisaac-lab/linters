@@ -9,8 +9,13 @@ module.exports = {
       version: 'detect',
     },
   },
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'prettier'],
-  plugins: ['react', 'react-hooks', 'react-native', '@typescript-eslint', 'simple-import-sort', 'prettier'],
+  extends: [
+    'eslint:recommended',
+    'next/core-web-vitals',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+  ],
+  plugins: ['@typescript-eslint', 'simple-import-sort', 'prettier'],
   rules: {
     '@typescript-eslint/ban-ts-comment': 'error',
     '@typescript-eslint/explicit-function-return-type': 'error', // 'off' is acceptable for existing project.
@@ -54,10 +59,6 @@ module.exports = {
         bracketSpacing: true,
       },
     ],
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'error',
-    'react/prop-types': 'off',
-    'react-native/no-unused-styles': 'error',
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
   },
